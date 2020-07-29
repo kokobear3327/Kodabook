@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://richardepitts:Rockets94@kodabook.dtpvf.mongodb.net/<dbname>?retryWrites=true&w=majority"
+
+}
