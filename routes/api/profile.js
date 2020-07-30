@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const auth = require("../../middleware/auth");
-const { check, validationResult } = require("express-validator/check");
+const { check, validationResult } = require("express-validator");
 
 // Profile Model:
 const Profile = require("../../models/Profile");
@@ -107,5 +107,40 @@ router.post(
     res.send("Hello");
   }
 );
+
+// @route        GET api/profile
+// @description  Get all profiles
+// @access       Public
+router.get("/", async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate("user", ["name", "avatar"]);
+    res.json(profiles);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
+
+// @route        GET api/profile/user/:user_id
+// @description  Get profile by User ID
+// @access       Public
+router.get("/user/:user_id", async (req, res) => {
+  try {
+    const profile = await Profile.findOne({
+      user: req.params.user_id,
+    }).populate("user", ["name", "avatar"]);
+
+    if (!profile)
+      return res.status(400).json({ msg: "There is no profile yo" });
+
+    res.json(profile);
+  } catch (err) {
+    console.error(err.message);
+    if (err.kind == "ObjectId") {
+      return res.status(400).json({ msg: "Profile not found" });
+    }
+    res.status(500).send("Server Error");
+  }
+});
 
 module.exports = router;
