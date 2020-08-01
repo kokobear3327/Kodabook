@@ -73,7 +73,9 @@ img {
   border-radius:10px;
 }
 
-
+.post-area {
+  border-radius: 10px;
+}
 
 /* Utilities */
 .container {
@@ -238,7 +240,7 @@ display: inline-block;
   margin: auto;
 display: flex;
 color: #fff;
-background: linear-gradient(-45deg, #9da6b3, #c7d5e9, #869dbd, #132641);
+background: linear-gradient(45deg, #9da6b3, #424d5c, #869dbd, #1e2b3e);
 background-size: 700% 700%;
 animation: gradient 12s ease-in-out infinite;
 border-radius: 10px;
