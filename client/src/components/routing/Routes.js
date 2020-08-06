@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Register from '../auth/Register';
 import Login from '../auth/Login';
+import GuestLogin from '../auth/GuestLogin';
 import Alert from '../layout/Alert';
 import Dashboard from '../dashboard/Dashboard';
 import ProfileForm from '../profile-forms/ProfileForm';
@@ -21,6 +22,7 @@ const Routes = props => {
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/guest-login" component={GuestLogin} />
         <Route exact path="/profiles" component={Profiles} />
         <Route exact path="/profile/:id" component={Profile} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />

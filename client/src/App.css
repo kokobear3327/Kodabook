@@ -408,6 +408,9 @@ button {
   top: 0;
   border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
+  background: linear-gradient(-45deg, #2f3b4b, #121820, #273b58, #050506);
+	background-size: 700% 700%;
+  animation: gradient 15s ease-in-out infinite;
 }
 
 .navbar ul {
