@@ -1,0 +1,7 @@
+{
+    "mongoURI": "mongodb+srv://richardepitts:Rockets94@kodabook.dtpvf.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret": "MySecretToken",
+    "githubClientId": "40089e3f84e6bd453f92",
+    "githubSecret": "e4ce28e5a66b0b2a6cd3a6524cc6077e77f528b2"
+  }
+  

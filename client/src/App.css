@@ -77,6 +77,7 @@ img {
   border-radius: 10px;
 }
 
+
 /* Utilities */
 .container {
   max-width: 1100px;
@@ -664,6 +665,10 @@ button {
   .profile-about .skills {
     flex-direction: column;
   }
+
+  /* .dash-buttons {
+    display: flex;
+  } */
 
   .dash-buttons a {
     display: block;
